@@ -2,7 +2,7 @@ import React from 'react'
 import Item from './Item'
 import { useConsoleContext } from '../../../context/ConsoleContext'
 import { useStyles } from './RequestList.style'
-
+import cross from '../../../icons/cross.svg'
 
 function Test() {
 
@@ -22,7 +22,7 @@ function Test() {
                 <div className={styles.gradient}>                     
                 </div>
                 <div className={styles.cross} onClick={deleteHistory}>  
-                    <img src="/icons/cross.svg" alt="delete" />
+                    <img src={cross} alt="delete" />
                 </div>
             
         </div>

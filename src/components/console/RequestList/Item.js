@@ -3,7 +3,9 @@ import { useConsoleContext } from 'src/context/ConsoleContext'
 import React from 'react'
 import clsx from 'clsx'
 import { useScrollWithDropdown } from './useScrollWithDropdown'
-
+import dots from '../../../icons/dots.svg'
+import green from '../../../icons/EllipseGreen.svg'
+import red from '../../../icons/EllipseRed.svg'
 
 function Item({name, success, customref, onDelete}) {
     const {deleteRequest, copyRequest, doRequest} = useConsoleContext()
@@ -13,11 +15,11 @@ function Item({name, success, customref, onDelete}) {
     return (
         <div  className={styles.rel} >
             <div className={styles.imgWrap}>
-                {success ? <img src="/icons/EllipseGreen.svg" alt="green" />: <img src="/icons/EllipseRed.svg" alt="red" />}
+                {success ? <img src={green} alt="green" />: <img src={red} alt="red" />}
             </div>
             <span>{name}</span>
             <div ref={buttonRef} className={styles.dotsWrap}>
-                <img src="/icons/dots.svg" alt="dots" />
+                <img src={dots} alt="dots" />
                 <ul ref={ulRef} 
                     className={styles.dropdown}>
                     <div className={styles.buttonWrapper} >

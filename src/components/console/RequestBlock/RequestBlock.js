@@ -4,6 +4,9 @@ import PrimaryButton from 'src/components/login/PrimaryButton';
 import clsx from 'clsx';
 import api from 'src/helpers/sendsay';
 import { useConsoleContext } from 'src/context/ConsoleContext';
+import spinner from '../../../icons/Spinner2.svg'
+import dots from '../../../icons/dots.svg'
+import format from '../../../icons/format.svg'
 
 function RequestBlock() {
 
@@ -67,7 +70,7 @@ function RequestBlock() {
                                     onChange={onTextareaChange}/>                    
                 </div>
             </div>
-            <div className={styles.imgWrap}><img src="/icons/dots.svg" alt="dots" /></div>
+            <div className={styles.imgWrap}><img src={dots} alt="dots" /></div>
             <div className={styles.blockWrap}>
                 <span className={clsx(styles.span, isServerError && styles.error)}>Ответ:</span>
                 <div className={clsx(styles.reqresBlock, isServerError && styles.errorBlock) }>
@@ -80,13 +83,13 @@ function RequestBlock() {
             
             <div className={styles.submitBlock}>
                 <PrimaryButton type="submit" onClick={onSubmit}>
-                { false ? <img alt='loading' src="/icons/Spinner2.svg"/>:'Отправить'}
+                { false ? <img alt='loading' src={spinner}/>:'Отправить'}
                 </PrimaryButton>
                 <div>
                     <a target="_blank" rel="noreferrer noopener" href="https://github.com/Sa6aTeur">@github.com/Sa6aTeur</a>
                 </div>
                 <div className={styles.formatingBlock} onClick={onFormatingClick}>
-                    <img src="/icons/format.svg" alt="format" />
+                    <img src={format} alt="format" />
                     <span>Форматировать</span>
                 </div>
             </div>     

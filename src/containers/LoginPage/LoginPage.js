@@ -11,7 +11,7 @@ import { useLoginContext } from 'src/context/LoginContext';
 import ErrorBlock from 'src/components/login/ErrorBlock/ErrorBlock';
 import { loginFormValidateSchema } from './loginPageValidateSchema';
 import { useStyles } from './LoginPage.styles';
-
+import spinner from '../../icons/Spinner2.svg'
 
 function LoginPage({history}) {
   
@@ -82,7 +82,7 @@ function LoginPage({history}) {
             errormessage={errors?.password?.message} />
         
         <PrimaryButton type="submit">
-        { loading ? <img alt='loading' src="/icons/Spinner2.svg"/>:'Войти'}
+        { loading ? <img alt='loading' src={spinner}/>:'Войти'}
         </PrimaryButton>
       </LoginForm>
     </LoginContainer>
