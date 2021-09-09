@@ -1,22 +1,32 @@
 {
   "files": {
     "main.css": "/API-console/static/css/main.f7b9ba9a.chunk.css",
-    "main.js": "/API-console/static/js/main.e6053386.chunk.js",
-    "main.js.map": "/API-console/static/js/main.e6053386.chunk.js.map",
+    "main.js": "/API-console/static/js/main.5896e741.chunk.js",
+    "main.js.map": "/API-console/static/js/main.5896e741.chunk.js.map",
     "runtime-main.js": "/API-console/static/js/runtime-main.1fbbd6fa.js",
     "runtime-main.js.map": "/API-console/static/js/runtime-main.1fbbd6fa.js.map",
-    "static/js/2.227316d4.chunk.js": "/API-console/static/js/2.227316d4.chunk.js",
-    "static/js/2.227316d4.chunk.js.map": "/API-console/static/js/2.227316d4.chunk.js.map",
+    "static/js/2.37f75db9.chunk.js": "/API-console/static/js/2.37f75db9.chunk.js",
+    "static/js/2.37f75db9.chunk.js.map": "/API-console/static/js/2.37f75db9.chunk.js.map",
     "index.html": "/API-console/index.html",
-    "precache-manifest.8e07a7210836f6fd913478237d3e41f4.js": "/API-console/precache-manifest.8e07a7210836f6fd913478237d3e41f4.js",
+    "precache-manifest.f114ade314a5a7ff50240a775e487750.js": "/API-console/precache-manifest.f114ade314a5a7ff50240a775e487750.js",
     "service-worker.js": "/API-console/service-worker.js",
     "static/css/main.f7b9ba9a.chunk.css.map": "/API-console/static/css/main.f7b9ba9a.chunk.css.map",
-    "static/js/2.227316d4.chunk.js.LICENSE.txt": "/API-console/static/js/2.227316d4.chunk.js.LICENSE.txt"
+    "static/js/2.37f75db9.chunk.js.LICENSE.txt": "/API-console/static/js/2.37f75db9.chunk.js.LICENSE.txt",
+    "static/media/EllipseGreen.svg": "/API-console/static/media/EllipseGreen.c654d965.svg",
+    "static/media/EllipseRed.svg": "/API-console/static/media/EllipseRed.d20475ce.svg",
+    "static/media/Spinner2.svg": "/API-console/static/media/Spinner2.56b837e5.svg",
+    "static/media/cancelFulScr.svg": "/API-console/static/media/cancelFulScr.8f9c9ecd.svg",
+    "static/media/cross.svg": "/API-console/static/media/cross.ce051b7b.svg",
+    "static/media/dots.svg": "/API-console/static/media/dots.81115c81.svg",
+    "static/media/format.svg": "/API-console/static/media/format.7ac10753.svg",
+    "static/media/full-screen.svg": "/API-console/static/media/full-screen.aea039be.svg",
+    "static/media/log-out.svg": "/API-console/static/media/log-out.6fb60e45.svg",
+    "static/media/logo.svg": "/API-console/static/media/logo.2140c08d.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.1fbbd6fa.js",
-    "static/js/2.227316d4.chunk.js",
+    "static/js/2.37f75db9.chunk.js",
     "static/css/main.f7b9ba9a.chunk.css",
-    "static/js/main.e6053386.chunk.js"
+    "static/js/main.5896e741.chunk.js"
   ]
 }
