@@ -1,15 +1,13 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, HashRouter} from 'react-router-dom';
 import LoginPage from 'src/containers/LoginPage/LoginPage';
 import ConsolePage from './containers/ConsolePage';
 import { LoginProvider } from './context/LoginContext';
 import { ConsoleProvider } from './context/ConsoleContext';
-import Test from './components/console/RequestList/RequestList';
-
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
 
         
           <Switch>
@@ -20,15 +18,12 @@ function App() {
                 </Route>
                 <Route  path="/console" >
                   <ConsolePage/>
-                </Route> 
-                <Route  path="/console1" >
-                  <Test/>
-                </Route>                      
+                </Route>                     
               </ConsoleProvider>
             </LoginProvider>
           </Switch>
         
-    </Router>
+    </HashRouter>
   );
 }
 
