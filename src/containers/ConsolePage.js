@@ -4,7 +4,6 @@ import Header from 'src/components/console/Header/Header'
 import RequestBlock from 'src/components/console/RequestBlock/RequestBlock'
 import Test from 'src/components/console/RequestList/RequestList'
 
-
 const useStyles = makeStyles((theme) => ({
     root:{
         display: 'flex',
@@ -14,8 +13,8 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 function ConsolePage() {
-
     const styles = useStyles()
+    
     return (
         <div className={styles.root}>
             <Header />

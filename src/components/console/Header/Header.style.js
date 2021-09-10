@@ -46,6 +46,10 @@ export const useStyles = makeStyles((theme) => ({
     fullscreen:{
         minWidth: '20px',
         minHeight: '20px',
+        '& img':{
+            width: '18px',
+            height: '18px',
+        },
         "&:hover": {
             cursor: 'pointer',
             "& img": {
@@ -55,7 +59,7 @@ export const useStyles = makeStyles((theme) => ({
             },  
         },
     },
-    canselFullscreen:{
+    cancelFullscreen:{
         minWidth: '20px',
         minHeight: '20px',
         "&:hover": {

@@ -3,7 +3,6 @@ import { makeStyles} from '@material-ui/core'
 import { Input as Input1} from '@material-ui/core'
 import clsx from 'clsx'
 
-
 const useStyles = makeStyles((theme) => ({
     root:{
         width: '460px',
@@ -31,8 +30,8 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const Input = forwardRef((props,ref) => {
-
     const styles = useStyles()
+
     return (
         <>
             <span className={clsx(styles.span, props.iserror && styles.spanerror)}>{props.span}</span>

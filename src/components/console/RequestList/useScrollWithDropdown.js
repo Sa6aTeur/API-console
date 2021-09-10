@@ -1,13 +1,11 @@
 import {useEffect,useRef } from 'react'
 
-
 export function useScrollWithDropdown() { 
     const ulRef = useRef(null) 
-    const buttonRef = useRef(null) 
+    const buttonRef = useRef(null)
 
     const handleMouseScroll = () => {
         const el =buttonRef.current.getBoundingClientRect()
-        
         ulRef.current.style.top = String(Math.round(el.y+20))+'px'    
         ulRef.current.style.left = String(Math.round(el.x-20))+'px'
     };
@@ -47,5 +45,6 @@ export function useScrollWithDropdown() {
       },
       [] 
     );
+
     return [buttonRef, ulRef];
 } 

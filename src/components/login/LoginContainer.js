@@ -1,7 +1,6 @@
 import React from 'react'
 import {Container, makeStyles} from '@material-ui/core'
 
-
 const useStyles = makeStyles((theme)=> ({
     root:{
         height: '100%',
@@ -14,7 +13,6 @@ const useStyles = makeStyles((theme)=> ({
 }))
 
 export const LoginContainer = ({children, ...props}) => {
-
     const styles = useStyles()
 
     return (

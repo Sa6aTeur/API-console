@@ -4,9 +4,7 @@ import api from 'src/helpers/sendsay';
 
 const LoginContex = createContext()
 
-
 export const LoginProvider =({children}) => {
-
     const initialData = JSON.parse(localStorage.getItem('loginData'))
     
     const [loginData, setContextLoginData] = useState({

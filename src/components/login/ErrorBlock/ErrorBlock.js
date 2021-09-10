@@ -1,9 +1,7 @@
 import React from 'react'
 import { useStyles } from './ErrorBlock.style'
 
-
 function ErrorBlock(props) {
-
     const styles = useStyles()
 
     return (

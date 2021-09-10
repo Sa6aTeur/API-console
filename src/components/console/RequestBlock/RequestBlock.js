@@ -4,12 +4,12 @@ import PrimaryButton from 'src/components/login/PrimaryButton';
 import clsx from 'clsx';
 import api from 'src/helpers/sendsay';
 import { useConsoleContext } from 'src/context/ConsoleContext';
-import spinner from '../../../icons/Spinner2.svg'
+import Spinner from 'src/components/ui/Spinner';
 import dots from '../../../icons/dots.svg'
 import format from '../../../icons/format.svg'
+import Texts from 'src/textConstants';
 
 function RequestBlock() {
-
     const styles = useStyles()
     const [isError,setIsError] = useState(false)
     const [isServerError,setIsServerError] = useState(false)
@@ -63,11 +63,11 @@ function RequestBlock() {
             <div className={styles.blockWrap} >
                 <span className={clsx(styles.span, isError && styles.error)}>Запрос:</span>
                 <div className={clsx(styles.reqresBlock, isError && styles.errorBlock) }>        
-                        <textarea   name="requestInput" 
-                                    id="requestInput" 
-                                    value={requestInputValue}
-                                    type="text" 
-                                    onChange={onTextareaChange}/>                    
+                    <textarea name="requestInput" 
+                              id="requestInput" 
+                              value={requestInputValue}
+                              type="text" 
+                              onChange={onTextareaChange}/>                    
                 </div>
             </div>
             <div className={styles.imgWrap}><img src={dots} alt="dots" /></div>
@@ -83,7 +83,9 @@ function RequestBlock() {
             
             <div className={styles.submitBlock}>
                 <PrimaryButton type="submit" onClick={onSubmit}>
-                { false ? <img alt='loading' src={spinner}/>:'Отправить'}
+                {false 
+                    ?<Spinner/>
+                    :Texts.REQUEST_NAME}
                 </PrimaryButton>
                 <div>
                     <a target="_blank" rel="noreferrer noopener" href="https://github.com/Sa6aTeur">@github.com/Sa6aTeur</a>
@@ -94,7 +96,6 @@ function RequestBlock() {
                 </div>
             </div>     
         </div>
-        
     )
 }
 

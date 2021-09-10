@@ -3,13 +3,12 @@ import React, {useState} from 'react'
 import { useHistory } from 'react-router'
 import { useLoginContext } from 'src/context/LoginContext'
 import {useStyles} from './Header.style'
-import logo from '../../../icons/logo.svg'
 import logoutIcon from '../../../icons/log-out.svg'
 import cancelFulScr from '../../../icons/cancelFulScr.svg'
 import fullScr from '../../../icons/full-screen.svg'
+import Logo from 'src/components/ui/Logo'
 
 function Header() {
-
     const {loginData, logout} = useLoginContext()
     const {login,sublogin} = loginData
     const styles = useStyles()
@@ -33,7 +32,7 @@ function Header() {
     return (
         <div className={styles.root}>
             <div>
-                <img className={styles.logo} src={logo} alt="logo" />
+                <Logo/>
                 <h3>API-консолька</h3>
             </div>
 
@@ -48,12 +47,11 @@ function Header() {
                 </div>
 
                 {fullscreen 
-                    ? <div className={styles.canselFullscreen} onClick={onCancelFullScreenClick}>
-                        <img height={20} width={20} className={styles.cancel} src={cancelFulScr} alt="fullscreeen" /> 
-                      </div>
-                    
+                    ?<div className={styles.cancelFullscreen} onClick={onCancelFullScreenClick}>
+                        <img src={cancelFulScr} alt="fullscreeen" /> 
+                    </div>  
                     :<div className={styles.fullscreen} onClick={onFullScreenClick}>
-                        <img height={18} width={18} className={styles.cancel} src={fullScr} alt="fullscreeen" /> 
+                        <img src={fullScr} alt="fullscreeen" /> 
                     </div>}
             </div>
         </div>

@@ -11,10 +11,12 @@ import { useLoginContext } from 'src/context/LoginContext';
 import ErrorBlock from 'src/components/login/ErrorBlock/ErrorBlock';
 import { loginFormValidateSchema } from './loginPageValidateSchema';
 import { useStyles } from './LoginPage.styles';
-import spinner from '../../icons/Spinner2.svg'
+import Spinner from 'src/components/ui/Spinner';
+import Texts from 'src/textConstants';
+
+
 
 function LoginPage({history}) {
-  
   const [loginError, setLoginError] = useState({})
   const {loginData, setLoginData , login} = useLoginContext()
   const {loading, sessionKey} = loginData
@@ -82,7 +84,9 @@ function LoginPage({history}) {
             errormessage={errors?.password?.message} />
         
         <PrimaryButton type="submit">
-        { loading ? <img alt='loading' src={spinner}/>:'Войти'}
+        { loading 
+          ?<Spinner/>
+          :Texts.LOGIN_BUTTON}
         </PrimaryButton>
       </LoginForm>
     </LoginContainer>

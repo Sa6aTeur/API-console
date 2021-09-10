@@ -18,6 +18,19 @@ export const useStyles = makeStyles((theme) => ({
             cursor: 'pointer', 
         },
     }, 
+    copyWrap:{
+        position: 'absolute',
+        borderRadius: '5px',
+        top: '50%',
+        left: '50%',
+        transform: 'translateX(-50%) translateY(-90%)',
+        zIndex: '5',
+        pading: '2px 2px',
+        background: 'rgba(246, 246, 246, 1)'
+    },
+    copySpan:{
+       fontSize: '10px',
+    },
     imgWrap:{
         marginRight: '7px',
     },
@@ -36,9 +49,6 @@ export const useStyles = makeStyles((theme) => ({
         border: 'none',
         background: '#fff',
     },
-    buttonWrapper:{
-        borderTop: '1px solid rgba(0, 0, 0, 0.2)',
-    },
     blueButton: {
         "&:hover": {
             background: '#0055FB',
@@ -50,8 +60,6 @@ export const useStyles = makeStyles((theme) => ({
             background: '#CF2C00',
             color: '#fff', 
         },
-    }
-
-    
+    }   
 })
 )

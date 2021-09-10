@@ -3,7 +3,6 @@ import React, { createContext,useContext,useState} from 'react'
 const ConsoleContex = createContext()
 
 export const ConsoleProvider =({children}) => {
-
     const initialData = JSON.parse(localStorage.getItem('consoleData'))
     
     const [requestInputValue,setRequestInputValue] = useState("")
@@ -54,8 +53,8 @@ export const ConsoleProvider =({children}) => {
         if (newHistory.length > 15){
             newHistory.splice(15) 
         }
-        newHistory.unshift(newRequest)
 
+        newHistory.unshift(newRequest)
         setContextConsoleData((prevData)=>({
             ...prevData,
             requests: [...newHistory]
@@ -65,13 +64,11 @@ export const ConsoleProvider =({children}) => {
     }
 
     const deleteRequest = (name) => {
-        console.log('here')
         const newHistory = consoleData.requests.filter(r => r.name !== name)
         setContextConsoleData({requests: newHistory})
         localStorage.setItem('consoleData',JSON.stringify({requests: [...newHistory]}))
     }
-
-    
+ 
     return <ConsoleContex.Provider value = {{consoleData,
                                             requestInputValue,
                                             needSubmit,
