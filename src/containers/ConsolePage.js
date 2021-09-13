@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core'
 import React from 'react'
 import Header from 'src/components/console/Header/Header'
 import RequestBlock from 'src/components/console/RequestBlock/RequestBlock'
-import Test from 'src/components/console/RequestList/RequestList'
+import RequestList from 'src/components/console/RequestList/RequestList'
 
 const useStyles = makeStyles((theme) => ({
     root:{
@@ -18,7 +18,7 @@ function ConsolePage() {
     return (
         <div className={styles.root}>
             <Header />
-            <Test/>
+            <RequestList/>
             <RequestBlock/>
         </div>
     )
