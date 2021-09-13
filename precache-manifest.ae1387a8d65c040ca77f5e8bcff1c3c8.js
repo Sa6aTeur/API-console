@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d2e5787e446b49514377c01da5d1d071",
+    "revision": "9545844d0445d09ea0d531d2121ae4ba",
     "url": "/API-console/index.html"
   },
   {
-    "revision": "4f34a4588fd719267c89",
-    "url": "/API-console/static/css/main.f7b9ba9a.chunk.css"
+    "revision": "bab43d3fa7c5541b691e",
+    "url": "/API-console/static/css/main.ad292a1f.chunk.css"
   },
   {
-    "revision": "0a52b563ec62988be269",
-    "url": "/API-console/static/js/2.37f75db9.chunk.js"
+    "revision": "cd5a584de5eca97a3845",
+    "url": "/API-console/static/js/2.097b2551.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/API-console/static/js/2.37f75db9.chunk.js.LICENSE.txt"
+    "url": "/API-console/static/js/2.097b2551.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4f34a4588fd719267c89",
-    "url": "/API-console/static/js/main.5896e741.chunk.js"
+    "revision": "bab43d3fa7c5541b691e",
+    "url": "/API-console/static/js/main.9294e545.chunk.js"
   },
   {
     "revision": "352213b16d8f1588ae6d",
@@ -32,16 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/API-console/static/media/EllipseRed.d20475ce.svg"
   },
   {
-    "revision": "56b837e5d0ee615611f8f45f15a36e62",
-    "url": "/API-console/static/media/Spinner2.56b837e5.svg"
-  },
-  {
     "revision": "8f9c9ecdcf34868bad085fcc40d00b22",
     "url": "/API-console/static/media/cancelFulScr.8f9c9ecd.svg"
-  },
-  {
-    "revision": "ce051b7baab41f670dbc508d858a87c8",
-    "url": "/API-console/static/media/cross.ce051b7b.svg"
   },
   {
     "revision": "81115c8152d83912e785379cbba12159",
@@ -60,7 +52,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/API-console/static/media/log-out.6fb60e45.svg"
   },
   {
-    "revision": "2140c08d548b77cd76bb98508e6ac075",
-    "url": "/API-console/static/media/logo.2140c08d.svg"
+    "revision": "aeb66b10d516e02c84324e3bfa1b8e4d",
+    "url": "/API-console/static/media/meh.aeb66b10.svg"
   }
 ]);
