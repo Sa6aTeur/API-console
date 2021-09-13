@@ -28,7 +28,7 @@ function Item({name, success, customref, onDelete}) {
                     ?<img src={green} alt="green" />
                     :<img src={red} alt="red" />}
             </div>
-            {isVisibleCopied && <div className={styles.copyWrap}><span className={styles.copySpan}>{Texts.COPIED_TEXT}</span></div>}
+            {isVisibleCopied && <div className={styles.copyWrap}><span className={styles.copySpan}>{Texts.COPIED}</span></div>}
             <span>{name}</span>
             <div ref={buttonRef} className={styles.dotsWrap}>
                 <img src={dots} alt="dots" />

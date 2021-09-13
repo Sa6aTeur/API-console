@@ -4,7 +4,6 @@ const Texts = {
     SEND: 'Отправить',
     LOGIN_BUTTON: 'Войти',
     LOGOUT_BUTTON: 'Выйти',
-    COPIED_TEXT: 'Скопировано',
     LOGIN: 'Логин',
     SUBLOGIN: 'Сублогин',
     PASSWORD: 'Пароль',
