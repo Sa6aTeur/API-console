@@ -61,7 +61,7 @@ function RequestBlock() {
         <div className={styles.wrap} >
             <div className={styles.root}>
             <div className={styles.blockWrap} >
-                <span className={clsx(styles.span, isError && styles.error)}>Запрос:</span>
+                <span className={clsx(styles.span, isError && styles.error)}>{Texts.REQUEST}</span>
                 <div className={clsx(styles.reqresBlock, isError && styles.errorBlock) }>        
                     <textarea name="requestInput" 
                               id="requestInput" 
@@ -72,7 +72,7 @@ function RequestBlock() {
             </div>
             <div className={styles.imgWrap}><img src={dots} alt="dots" /></div>
             <div className={styles.blockWrap}>
-                <span className={clsx(styles.span, isServerError && styles.error)}>Ответ:</span>
+                <span className={clsx(styles.span, isServerError && styles.error)}>{Texts.RESPONSE}</span>
                 <div className={clsx(styles.reqresBlock, isServerError && styles.errorBlock) }>
                     <pre>
                         {responseValue}
@@ -85,14 +85,14 @@ function RequestBlock() {
                 <PrimaryButton type="submit" onClick={onSubmit}>
                 {false 
                     ?<Spinner/>
-                    :Texts.REQUEST_NAME}
+                    :Texts.SEND}
                 </PrimaryButton>
                 <div>
                     <a target="_blank" rel="noreferrer noopener" href="https://github.com/Sa6aTeur">@github.com/Sa6aTeur</a>
                 </div>
                 <div className={styles.formatingBlock} onClick={onFormatingClick}>
                     <img src={format} alt="format" />
-                    <span>Форматировать</span>
+                    <span>{Texts.FORMATTING}</span>
                 </div>
             </div>     
         </div>

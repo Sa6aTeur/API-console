@@ -59,26 +59,26 @@ function LoginPage({history}) {
     <LoginContainer>
       <img src="/icons/logo.svg" alt="" className={styles.logo} />
       <LoginForm onSubmit={handleSubmit(onSubmit)}>
-        <h1 className={styles.headerText}>API-консолька</h1>
-        {isError && <ErrorBlock title="Ошибка входа" message={loginError?.explain} />}
+        <h1 className={styles.headerText}>{Texts.LOGO_TITLE}</h1>
+        {isError && <ErrorBlock title={Texts.LOGIN_ERROR} message={loginError?.explain} />}
         <Input {...register("login")}  
             name="login" 
             id="login" 
-            span="Логин"
+            span={Texts.LOGIN}
             type="text" 
             iserror={errors?.login} 
             errormessage={errors?.login?.message} />
         <Input {...register("sublogin")}  
             name="sublogin" 
             id="sublogin" 
-            span="Сублогин"
+            span={Texts.SUBLOGIN}
             type="text" 
             iserror={errors?.sublogin} 
             errormessage={errors?.sublogin?.message} />
         <Input {...register("password")}  
             name="password" 
             id="password" 
-            span="Пароль"
+            span={Texts.PASSWORD}
             type="text" 
             iserror={errors?.password} 
             errormessage={errors?.password?.message} />

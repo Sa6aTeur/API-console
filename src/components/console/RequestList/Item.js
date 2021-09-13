@@ -33,9 +33,9 @@ function Item({name, success, customref, onDelete}) {
             <div ref={buttonRef} className={styles.dotsWrap}>
                 <img src={dots} alt="dots" />
                 <ul ref={ulRef} className={styles.dropdown}>
-                    <ItemButton name="Выполнить" onClick={()=>doRequest(name)} className={clsx(styles.dropdownButton,styles.blueButton)} />
-                    <ItemButton name="Скопировать" onClick={onCopyButtonClick} className={clsx(styles.dropdownButton,styles.blueButton)}/>
-                    <ItemButton name="Удалить" onClick={()=>deleteRequest(name)} className={clsx(styles.dropdownButton,styles.redButton)}/>  
+                    <ItemButton name={Texts.DO_REQUEST} onClick={()=>doRequest(name)} className={clsx(styles.dropdownButton,styles.blueButton)} />
+                    <ItemButton name={Texts.COPY} onClick={onCopyButtonClick} className={clsx(styles.dropdownButton,styles.blueButton)}/>
+                    <ItemButton name={Texts.DELETE} onClick={()=>deleteRequest(name)} className={clsx(styles.dropdownButton,styles.redButton)}/>  
                 </ul> 
             </div>    
         </div> 

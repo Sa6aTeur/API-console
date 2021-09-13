@@ -7,6 +7,7 @@ import logoutIcon from '../../../icons/log-out.svg'
 import cancelFulScr from '../../../icons/cancelFulScr.svg'
 import fullScr from '../../../icons/full-screen.svg'
 import Logo from 'src/components/ui/Logo'
+import Texts from 'src/textConstants'
 
 function Header() {
     const {loginData, logout} = useLoginContext()
@@ -33,7 +34,7 @@ function Header() {
         <div className={styles.root}>
             <div>
                 <Logo/>
-                <h3>API-консолька</h3>
+                <h3>{Texts.LOGO_TITLE}</h3>
             </div>
 
             <div>
@@ -42,7 +43,7 @@ function Header() {
                 </div>
                 
                 <div className={styles.cancelBlock} onClick={cancelClick}>
-                    <span>Выйти</span>
+                    <span>{Texts.LOGOUT_BUTTON}</span>
                     <img height={22} width={22} className={styles.cancel} src={logoutIcon} alt="logout" /> 
                 </div>
 
