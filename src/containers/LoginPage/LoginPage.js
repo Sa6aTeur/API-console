@@ -13,6 +13,7 @@ import { loginFormValidateSchema } from './loginPageValidateSchema';
 import { useStyles } from './LoginPage.styles';
 import Spinner from 'src/components/ui/Spinner';
 import Texts from 'src/textConstants';
+import Logo from 'src/components/ui/Logo';
 
 
 
@@ -57,7 +58,7 @@ function LoginPage({history}) {
 
   return (
     <LoginContainer>
-      <img src="/icons/logo.svg" alt="" className={styles.logo} />
+      <Logo className={styles.logo} />
       <LoginForm onSubmit={handleSubmit(onSubmit)}>
         <h1 className={styles.headerText}>{Texts.LOGO_TITLE}</h1>
         {isError && <ErrorBlock title={Texts.LOGIN_ERROR} message={loginError?.explain} />}
@@ -72,14 +73,13 @@ function LoginPage({history}) {
             name="sublogin" 
             id="sublogin" 
             span={Texts.SUBLOGIN}
-            type="text" 
             iserror={errors?.sublogin} 
             errormessage={errors?.sublogin?.message} />
         <Input {...register("password")}  
             name="password" 
             id="password" 
             span={Texts.PASSWORD}
-            type="text" 
+            type="password" 
             iserror={errors?.password} 
             errormessage={errors?.password?.message} />
         

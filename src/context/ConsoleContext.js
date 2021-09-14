@@ -1,4 +1,5 @@
 import React, { createContext,useContext,useState} from 'react'
+import Texts from 'src/textConstants'
 
 const ConsoleContex = createContext()
 
@@ -43,15 +44,15 @@ export const ConsoleProvider =({children}) => {
 
     const addRequest = (value) => {
         const newRequest = {
-            name: value.request.action,
+            name: value.request.action || Texts.UNNAMED_REQUEST,
             request: value.request,
             response: value.response,
             success: value.success
         }
 
         let newHistory = consoleData.requests.filter(r => r.name !== newRequest.name)
-        if (newHistory.length > 15){
-            newHistory.splice(15) 
+        if (newHistory.length >= 15){
+            newHistory.splice(14) 
         }
 
         newHistory.unshift(newRequest)

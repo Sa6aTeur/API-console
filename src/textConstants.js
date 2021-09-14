@@ -15,6 +15,7 @@ const Texts = {
     COPY: 'Скопировать',
     COPIED: 'Скопировано',
     DELETE: 'Удалить',
+    UNNAMED_REQUEST: 'Без имени'
 }
 
 export default Texts
