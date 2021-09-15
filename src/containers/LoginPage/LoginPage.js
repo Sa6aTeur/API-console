@@ -1,4 +1,4 @@
-import React, {useEffect,useState} from 'react';
+import React, {useEffect,useRef,useState} from 'react';
 import {withRouter} from 'react-router-dom';
 import {LoginContainer} from 'src/components/login/LoginContainer';
 import LoginForm from 'src/components/login/LoginForm';
@@ -24,6 +24,7 @@ function LoginPage({history}) {
   const styles = useStyles()
   const isLoggedIn = !!sessionKey?.length;
   const isError = !!loginError.id
+  const clickRef = useRef(null)
 
   useEffect(() => {
     if (isLoggedIn) {   
@@ -32,7 +33,7 @@ function LoginPage({history}) {
   }, [history, isLoggedIn]);
 
   useEffect(() => {
-    document.getElementById('root').click();
+    clickRef.current.click()
   },[])
 
   function onSubmit(data) {
@@ -61,10 +62,10 @@ function LoginPage({history}) {
   }
 
   return (
-    <LoginContainer>
+    <LoginContainer >
       <Logo className={styles.logo} />
       <LoginForm onSubmit={handleSubmit(onSubmit)}>
-        <h1 className={styles.headerText}>{Texts.LOGO_TITLE}</h1>
+        <h1 ref={clickRef} className={styles.headerText}>{Texts.LOGO_TITLE}</h1>
         {isError && <ErrorBlock title={Texts.LOGIN_ERROR} message={loginError?.explain} />}
         <Input {...register("login")}  
             name="login" 
@@ -78,6 +79,7 @@ function LoginPage({history}) {
             id="sublogin" 
             span={Texts.SUBLOGIN}
             iserror={errors?.sublogin} 
+            type="text" 
             errormessage={errors?.sublogin?.message} />
         <Input {...register("password")}  
             name="password" 

@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
     root:{
         width: '460px',
         height: '40px',
+        fontFamily: 'sans-serif',
         overflow: 'hidden',
         left: 'calc(50% - 460px/2)',
         marginBottom: '25px',
@@ -15,11 +16,13 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: '7px',
         border: '1px solid rgba(0, 0, 0, 0.2)',
         borderRadius: '5px',
+        '&:focus':{
+            outline: 'none',
+        }
     },
     span:{
         display: 'flex',
         marginBottom: '5px',
-        fontSize:'16px',
     },
     error:{
         border: '1px solid red'
@@ -36,12 +39,12 @@ const useStyles = makeStyles((theme) => ({
 
 const Input = forwardRef((props,ref) => {
     const styles = useStyles()
-
+    
     return (
         <>
             <span className={clsx(styles.span, props.iserror && styles.spanerror)}>{props.span}</span>
-            <Input1 {...props} className={clsx(styles.root, props.iserror && styles.error, props.className,
-                props.type ==='password' && styles.password )} disableUnderline ref={ref}{...props}/>
+            <input {...props} className={clsx(styles.root, props.iserror && styles.error, props.className,
+                props.type ==='password' && styles.password )} ref={ref}{...props}/>
         </>
     )
 })
