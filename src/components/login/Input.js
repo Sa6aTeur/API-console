@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
     root:{
         width: '460px',
         height: '40px',
+        overflow: 'hidden',
         left: 'calc(50% - 460px/2)',
         marginBottom: '25px',
         display: 'flex',
@@ -25,6 +26,10 @@ const useStyles = makeStyles((theme) => ({
     },
     spanerror:{
         color: 'red'
+    },
+    password:{
+        fontSize: '75px',
+        paddingTop: '5px',
     }
 
 }))
@@ -35,7 +40,8 @@ const Input = forwardRef((props,ref) => {
     return (
         <>
             <span className={clsx(styles.span, props.iserror && styles.spanerror)}>{props.span}</span>
-            <Input1 className={clsx(styles.root, props.iserror && styles.error)} disableUnderline ref={ref}{...props}/>
+            <Input1 {...props} className={clsx(styles.root, props.iserror && styles.error, props.className,
+                props.type ==='password' && styles.password )} disableUnderline ref={ref}{...props}/>
         </>
     )
 })

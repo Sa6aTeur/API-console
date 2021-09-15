@@ -31,6 +31,10 @@ function LoginPage({history}) {
     }
   }, [history, isLoggedIn]);
 
+  useEffect(() => {
+    document.getElementById('root').click();
+  },[])
+
   function onSubmit(data) {
     setLoginData({loading:true})
     LoginApi.authenticate(data).then((res) => {  

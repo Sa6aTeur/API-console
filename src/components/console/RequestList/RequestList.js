@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import Item from './Item'
 import { useConsoleContext } from '../../../context/ConsoleContext'
 import { useStyles } from './RequestList.style'
@@ -8,13 +8,18 @@ function RequestList() {
     const styles = useStyles()
     const {consoleData,deleteHistory} = useConsoleContext()
     const {requests} = consoleData
+    
+    const memoizedRequests =useCallback(
+        requests.map(request => {
+            return <Item {...request} key={Math.random()}/>
+        }),
+        [requests],
+    )
 
     return (
         <div className={styles.root} >
             <div id='scroll' className={styles.content}>                   
-                {requests.map(request => {
-                    return <Item {...request} key={Math.random()}/>
-                })}     
+                {memoizedRequests}     
             </div>
             <div className={styles.gradient}>                     
             </div>
