@@ -1,6 +1,5 @@
 import React, { forwardRef } from 'react'
 import { makeStyles} from '@material-ui/core'
-import { Input as Input1} from '@material-ui/core'
 import clsx from 'clsx'
 
 const useStyles = makeStyles((theme) => ({
