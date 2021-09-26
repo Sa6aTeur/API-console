@@ -1,0 +1,21 @@
+const Texts = {
+    LOGO_TITLE: 'API-консолька',
+    REQUEST_NAME: 'Запрос',
+    SEND: 'Отправить',
+    LOGIN_BUTTON: 'Войти',
+    LOGOUT_BUTTON: 'Выйти',
+    LOGIN: 'Логин',
+    SUBLOGIN: 'Сублогин',
+    PASSWORD: 'Пароль',
+    LOGIN_ERROR: 'Ошибка входа',
+    REQUEST: 'Запрос',
+    RESPONSE: 'Ответ',
+    FORMATTING: 'Форматировать',
+    DO_REQUEST: 'Выполнить',
+    COPY: 'Скопировать',
+    COPIED: 'Скопировано',
+    DELETE: 'Удалить',
+    UNNAMED_REQUEST: 'Без имени'
+}
+
+export default Texts
